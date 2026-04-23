@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   THE ARTISANAL ATELIER — Design System
+   Café Sacré Cœur Survey
+   ═══════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Espresso Palette ── */
+  --color-espresso: #271310;
+  --color-espresso-light: #3e2723;
+  --color-espresso-deep: #1a0c0a;
+  --color-gold: #735c00;
+  --color-gold-light: #9a7d0a;
+  --color-gold-muted: rgba(115, 92, 0, 0.15);
+  --color-cream: #fefccf;
+  --color-cream-warm: #fdf8c4;
+  --color-cream-deep: #f5f0b0;
+
+  /* ── Surface Tier Scale ── */
+  --color-surface: #fefccf;
+  --color-surface-container-low: #faf7be;
+  --color-surface-container: #f5f0b0;
+  --color-surface-container-high: #efe9a0;
+  --color-surface-container-highest: #e8e292;
+
+  /* ── On-surface (text) ── */
+  --color-on-surface: #1d1d03;
+  --color-on-surface-muted: #5c5a3a;
+  --color-on-surface-subtle: #8a8768;
+
+  /* ── Semantic ── */
+  --color-primary: #271310;
+  --color-primary-container: #3e2723;
+  --color-on-primary: #fefccf;
+  --color-secondary: #735c00;
+  --color-secondary-container: rgba(115, 92, 0, 0.12);
+  --color-on-secondary-container: #5c4a00;
+  --color-outline-variant: rgba(29, 29, 3, 0.15);
+
+  /* ── Shadows ── */
+  --shadow-ambient: 0px 20px 40px rgba(29, 29, 3, 0.05);
+  --shadow-elevated: 0px 8px 24px rgba(29, 29, 3, 0.08);
+  --shadow-float: 0px 32px 64px rgba(29, 29, 3, 0.1);
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* ── Radius ── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+}
+
+/* ── Base Reset ── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+#root {
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-gold-muted);
+  color: var(--color-espresso);
+}
+
+/* ── Gradient animation for shimmer effects ── */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes star-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.animate-gentle-float {
+  animation: gentle-float 3s ease-in-out infinite;
+}
+
+.animate-star-pop {
+  animation: star-pop 0.3s ease-out;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* ── Glass effect ── */
+.glass {
+  background: rgba(254, 252, 207, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-nav {
+  background: rgba(254, 252, 207, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ── Ghost Border ── */
+.ghost-border {
+  box-shadow: inset 0 0 0 1.5px rgba(29, 29, 3, 0.08);
+}
+
+.ghost-border-gold {
+  box-shadow: inset 0 0 0 1.5px rgba(115, 92, 0, 0.2);
+}
+
+/* ── Button gradient ── */
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #271310 0%, #3e2723 100%);
+}
+
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #3e2723 0%, #271310 100%);
+}
+
+/* ── Progress bar ── */
+.progress-track {
+  background: var(--color-surface-container-high);
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+}
