@@ -370,6 +370,163 @@ export const CommentScreen: React.FC<{
 );
 
 /* ═══════════════════════════════════════════
+   LOYALTY COIN ICON
+   ═══════════════════════════════════════════ */
+const LoyaltyCoinIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 400 400" className="mx-auto drop-shadow-2xl">
+    <title>Sacré Cœur - Pièce Fidélité</title>
+    <defs>
+      <radialGradient id="faceGrad" cx="38%" cy="32%" r="65%">
+        <stop offset="0%" stopColor="#FFFBE8"/>
+        <stop offset="18%" stopColor="#FFD700"/>
+        <stop offset="42%" stopColor="#C8960C"/>
+        <stop offset="72%" stopColor="#A07010"/>
+        <stop offset="100%" stopColor="#6B4600"/>
+      </radialGradient>
+      <radialGradient id="rimGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="60%" stopColor="#8A6200"/>
+        <stop offset="85%" stopColor="#5A3E00"/>
+        <stop offset="100%" stopColor="#2E1E00"/>
+      </radialGradient>
+      <radialGradient id="innerGrad" cx="40%" cy="36%" r="56%">
+        <stop offset="0%" stopColor="#FFF5C0"/>
+        <stop offset="28%" stopColor="#EDB800"/>
+        <stop offset="60%" stopColor="#B88800"/>
+        <stop offset="100%" stopColor="#7A5600"/>
+      </radialGradient>
+      <radialGradient id="reliefLight" cx="30%" cy="28%" r="50%">
+        <stop offset="0%" stopColor="#FFFDE0" stopOpacity="0.9"/>
+        <stop offset="100%" stopColor="#C89000" stopOpacity="0"/>
+      </radialGradient>
+      <filter id="ds">
+        <feDropShadow dx="4" dy="10" stdDeviation="14" floodColor="#2E1400" floodOpacity="0.65"/>
+      </filter>
+      <clipPath id="cc">
+        <circle cx="200" cy="200" r="141"/>
+      </clipPath>
+    </defs>
+
+    {/* Shadow */}
+    <circle cx="202" cy="208" r="164" fill="#1E0E00" filter="url(#ds)"/>
+
+    {/* Rim layers */}
+    <circle cx="200" cy="200" r="164" fill="url(#rimGrad)"/>
+    <circle cx="200" cy="200" r="160" fill="#6B4800"/>
+    <circle cx="200" cy="200" r="156" fill="#8A6200"/>
+    <circle cx="200" cy="200" r="152" fill="#C09000"/>
+    <circle cx="200" cy="200" r="148" fill="#A07800"/>
+    <circle cx="200" cy="200" r="143" fill="url(#faceGrad)"/>
+    <circle cx="200" cy="200" r="143" fill="url(#reliefLight)"/>
+
+    {/* Decorative rings */}
+    <circle cx="200" cy="200" r="141" fill="none" stroke="#7A5600" strokeWidth="0.8"/>
+    <circle cx="200" cy="200" r="138" fill="none" stroke="#FFE070" strokeWidth="0.5" opacity="0.5"/>
+    <circle cx="200" cy="200" r="135" fill="none" stroke="#8A6400" strokeWidth="0.6"/>
+    <circle cx="200" cy="200" r="130" fill="url(#innerGrad)"/>
+
+    {/* Logo clipped */}
+    <g clipPath="url(#cc)">
+
+      {/* C letter — multi-layer bevel */}
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#3A2A10" strokeWidth="38" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#4A5C2A" strokeWidth="32" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#3A5020" strokeWidth="26" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#2A3E16" strokeWidth="20" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#5E7C38" strokeWidth="13" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#486030" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M 208 98 C 148 98 98 146 98 200 C 98 254 148 302 208 302"
+        fill="none" stroke="#8AB858" strokeWidth="3" strokeLinecap="round" opacity="0.55"/>
+
+      {/* Heart shadow */}
+      <path d="M 222 212 C 222 204 230 193 242 193 C 255 193 261 202 261 212 C 261 222 253 231 242 239 C 236 243 229 249 222 255 C 215 249 208 243 201 239 C 190 231 183 222 183 212 C 183 202 189 193 201 193 C 214 193 222 204 222 212 Z"
+        fill="#5A2808"/>
+      {/* Heart mid */}
+      <path d="M 222 210 C 222 202 230 191 242 191 C 255 191 261 200 261 210 C 261 220 253 229 242 237 C 236 241 229 247 222 253 C 215 247 208 241 201 237 C 190 229 183 220 183 210 C 183 200 189 191 201 191 C 214 191 222 202 222 210 Z"
+        fill="#7A3010"/>
+      {/* Heart highlight fill */}
+      <path d="M 222 210 C 222 202 230 191 242 191 C 255 191 261 200 261 210 C 261 220 253 229 242 237 C 236 241 229 247 222 253 C 215 247 208 241 201 237 C 190 229 183 220 183 210 C 183 200 189 191 201 191 C 214 191 222 202 222 210 Z"
+        fill="#C06020" opacity="0.65"/>
+      <path d="M 222 210 C 222 202 230 191 242 191 C 255 191 261 200 261 210 C 261 220 253 229 242 237 C 236 241 229 247 222 253 C 215 247 208 241 201 237 C 190 229 183 220 183 210 C 183 200 189 191 201 191 C 214 191 222 202 222 210 Z"
+        fill="#E07828" opacity="0.3"/>
+      {/* Heart top-left light catch */}
+      <path d="M 210 199 C 214 194 222 191 230 193" fill="none" stroke="#F8A868" strokeWidth="2.5" strokeLinecap="round" opacity="0.75"/>
+      <path d="M 210 199 C 214 194 222 191 230 193" fill="none" stroke="#FFFAF0" strokeWidth="1" strokeLinecap="round" opacity="0.4"/>
+
+      {/* Steam left */}
+      <path d="M 208 186 C 203 176 210 166 205 156 C 200 146 207 138 204 128"
+        fill="none" stroke="#2A3E16" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M 208 186 C 203 176 210 166 205 156 C 200 146 207 138 204 128"
+        fill="none" stroke="#4A6828" strokeWidth="4.5" strokeLinecap="round"/>
+      <path d="M 208 186 C 203 176 210 166 205 156 C 200 146 207 138 204 128"
+        fill="none" stroke="#8AB858" strokeWidth="2" strokeLinecap="round" opacity="0.55"/>
+      <path d="M 208 186 C 203 176 210 166 205 156 C 200 146 207 138 204 128"
+        fill="none" stroke="#FFFFF0" strokeWidth="0.7" strokeLinecap="round" opacity="0.3"/>
+
+      {/* Steam middle */}
+      <path d="M 222 180 C 217 170 224 160 219 150 C 214 140 221 132 218 122"
+        fill="none" stroke="#2A3E16" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M 222 180 C 217 170 224 160 219 150 C 214 140 221 132 218 122"
+        fill="none" stroke="#4A6828" strokeWidth="4.5" strokeLinecap="round"/>
+      <path d="M 222 180 C 217 170 224 160 219 150 C 214 140 221 132 218 122"
+        fill="none" stroke="#8AB858" strokeWidth="2" strokeLinecap="round" opacity="0.55"/>
+      <path d="M 222 180 C 217 170 224 160 219 150 C 214 140 221 132 218 122"
+        fill="none" stroke="#FFFFF0" strokeWidth="0.7" strokeLinecap="round" opacity="0.3"/>
+
+      {/* Steam right */}
+      <path d="M 237 183 C 232 173 239 163 234 153 C 229 143 236 135 233 125"
+        fill="none" stroke="#2A3E16" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M 237 183 C 232 173 239 163 234 153 C 229 143 236 135 233 125"
+        fill="none" stroke="#4A6828" strokeWidth="4.5" strokeLinecap="round"/>
+      <path d="M 237 183 C 232 173 239 163 234 153 C 229 143 236 135 233 125"
+        fill="none" stroke="#8AB858" strokeWidth="2" strokeLinecap="round" opacity="0.55"/>
+      <path d="M 237 183 C 232 173 239 163 234 153 C 229 143 236 135 233 125"
+        fill="none" stroke="#FFFFF0" strokeWidth="0.7" strokeLinecap="round" opacity="0.3"/>
+
+    </g>
+
+    {/* Top text arc: SACRÉ CŒUR */}
+    <path id="topArc" d="M 70,200 A 130,130 0 0,1 330,200" fill="none"/>
+    <text fontFamily="Georgia,'Times New Roman',serif" fontSize="16" fontWeight="700" letterSpacing="2">
+      <textPath href="#topArc" startOffset="10%" fill="#3A2400">SACRÉ CŒUR</textPath>
+    </text>
+    <text fontFamily="Georgia,'Times New Roman',serif" fontSize="16" fontWeight="700" letterSpacing="2">
+      <textPath href="#topArc" startOffset="10%" fill="#FFE580" opacity="0.5">SACRÉ CŒUR</textPath>
+    </text>
+
+    {/* Stars top */}
+    <path id="starArcT" d="M 74,200 A 126,126 0 0,1 326,200" fill="none"/>
+    <text fontFamily="Georgia,serif" fontSize="10" letterSpacing="3">
+      <textPath href="#starArcT" startOffset="4%" fill="#8A6400" opacity="0.65">* * * * * * * * * * *</textPath>
+    </text>
+
+    {/* Bottom text arc: PROGRAMME FIDÉLITÉ */}
+    <path id="botArc" d="M 70,200 A 130,130 0 0,0 330,200" fill="none"/>
+    <text fontFamily="Georgia,'Times New Roman',serif" fontSize="12" fontWeight="700" letterSpacing="2">
+      <textPath href="#botArc" startOffset="9%" fill="#3A2400">PROGRAMME FIDÉLITÉ</textPath>
+    </text>
+    <text fontFamily="Georgia,'Times New Roman',serif" fontSize="12" fontWeight="700" letterSpacing="2">
+      <textPath href="#botArc" startOffset="9%" fill="#FFE580" opacity="0.5">PROGRAMME FIDÉLITÉ</textPath>
+    </text>
+
+    {/* Stars bottom */}
+    <path id="starArcB" d="M 76,200 A 124,124 0 0,0 324,200" fill="none"/>
+    <text fontFamily="Georgia,serif" fontSize="9" letterSpacing="2">
+      <textPath href="#starArcB" startOffset="6%" fill="#8A6400" opacity="0.6">* * * * * * * * * * * * *</textPath>
+    </text>
+
+    {/* Glint top-left */}
+    <ellipse cx="148" cy="128" rx="38" ry="14" fill="white" opacity="0.16" transform="rotate(-42 148 128)"/>
+    <ellipse cx="140" cy="123" rx="15" ry="6" fill="white" opacity="0.28" transform="rotate(-42 140 123)"/>
+  </svg>
+);
+
+/* ═══════════════════════════════════════════
    THANK YOU SCREEN
    ═══════════════════════════════════════════ */
 export const MerciScreen: React.FC<{ userId: string }> = ({ userId }) => {
@@ -413,15 +570,7 @@ export const MerciScreen: React.FC<{ userId: string }> = ({ userId }) => {
         className="mb-8 relative"
       >
         <div className="relative">
-          <Coffee className="w-16 h-16" style={{ color: '#735c00' }} />
-          {/* Floating Stars */}
-          <motion.div
-            animate={{ y: [0, -10, 0], rotate: [0, 15, 0], scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-4 -right-4"
-          >
-            <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
-          </motion.div>
+          <LoyaltyCoinIcon />
         </div>
       </motion.div>
 

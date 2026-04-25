@@ -180,6 +180,8 @@ export const UserInfoScreen: React.FC<{
             value={name}
             onChange={(e) => onChangeName(e.target.value)}
             placeholder="Fedi"
+            autoComplete="name"
+            autoCapitalize="words"
             className="w-full p-5 rounded-2xl text-base outline-none transition-all focus:ghost-border-gold"
             style={{
               background: '#efe9a0',
@@ -206,6 +208,9 @@ export const UserInfoScreen: React.FC<{
             value={email}
             onChange={(e) => { onChangeEmail(e.target.value); setEmailError(null); }}
             placeholder="fedi@exemple.com"
+            inputMode="email"
+            autoComplete="email"
+            autoCapitalize="none"
             className="w-full p-5 rounded-2xl text-base outline-none transition-all focus:ghost-border-gold"
             style={{
               background: '#efe9a0',

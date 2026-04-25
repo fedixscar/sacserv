@@ -342,8 +342,8 @@ const App: React.FC = () => {
             key="comment"
             value={answers.comment}
             onChange={(v) => setAnswers((p) => ({ ...p, comment: v }))}
-            onSkip={handleSubmit}
-            onSubmit={handleSubmit}
+            onSkip={() => handleSubmit()}
+            onSubmit={() => handleSubmit()}
           />
         );
       case 'merci':
@@ -376,7 +376,7 @@ const App: React.FC = () => {
         </AnimatePresence>
 
         {/* Footer Syntra */}
-        <div className="mt-auto pb-6 pt-8 flex justify-center w-full">
+        <div className="mt-auto pb-6 pt-8 flex justify-center w-full" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
           <div 
             className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase" 
             style={{ color: '#8a8768' }}
