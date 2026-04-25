@@ -10,66 +10,66 @@
 
 </div>
 
-Ce projet est une application de sondage interactive haute performance conçue pour le **Café Sacré Cœur**. L'objectif est d'évaluer l'intérêt des clients pour une fonctionnalité de **Matching communautaire** via une expérience utilisateur immersive.
+Cette application de sondage interactive a été développée pour le **Café Sacré Cœur**. Elle permet d'analyser l'intérêt des clients pour l'implémentation d'un système de matching communautaire à travers une interface utilisateur optimisée et immersive.
 
 ---
 
-## 💎 Fonctionnalités Clés
+## Fonctionnalités Principales
 
-- **Expérience Mobile-First :** Interface optimisée pour une utilisation tactile fluide et réactive.
-- **Design Artisanal :** Identité visuelle premium (Espresso-Cream-Gold) avec typographie *Playfair Display*.
-- **Animations Avancées :** Transitions cinématiques via `Framer Motion` et célébrations `Canvas-Confetti`.
-- **Algorithme de Matching :** Parcours utilisateur intelligent segmentant les besoins sociaux et activités.
-- **Système de Scoring :** Analyse quantitative de l'engagement client en temps réel.
-- **Sécurité & Intégrité :** Protection contre le spam et persistance des données via Supabase.
+- **Optimisation Mobile :** Interface conçue prioritairement pour une utilisation tactile fluide et réactive sur smartphone.
+- **Identité Visuelle Premium :** Système de design artisanal basé sur une palette Espresso-Cream-Gold et l'utilisation de la typographie Playfair Display.
+- **Orchestration d'Animations :** Transitions d'écrans fluides gérées par Framer Motion et intégration d'effets visuels avancés.
+- **Parcours Utilisateur Segmenté :** Questionnaire intelligent permettant d'identifier les profils d'utilisateurs et leurs préférences d'activités.
+- **Analyse de l'Engagement :** Système de scoring intégré pour évaluer quantitativement l'intérêt des répondants.
+- **Gestion des Données :** Persistance sécurisée des réponses et protection contre la duplication via l'infrastructure Supabase.
 
 ---
 
-## 🛠 Stack Technique
+## Spécifications Techniques
 
-| Technologie | Usage |
+| Composant | Technologie |
 | :--- | :--- |
-| **React 18** | Architecture UI & State Management |
-| **Vite** | Tooling & Build Optimization |
-| **Tailwind CSS 4.0** | Design System & Utilitaires |
-| **Framer Motion** | Orchestration des animations |
-| **Supabase** | Infrastructure Backend & SQL |
-| **Lucide React** | Système d'iconographie |
+| **Framework UI** | React 18 |
+| **Outils de Build** | Vite |
+| **Styles** | Tailwind CSS 4.0 |
+| **Animations** | Framer Motion |
+| **Backend / DB** | Supabase (PostgreSQL) |
+| **Iconographie** | Lucide React |
 
 ---
 
-## 🚀 Installation & Déploiement
+## Installation et Déploiement
 
-### 1. Configuration Locale
+### Environnement de Développement
 ```bash
 # Installation des dépendances
 npm install
 
-# Lancement de l'environnement de développement
+# Lancement du serveur de développement
 npm run dev
 ```
 
-### 2. Variables d'Environnement
-Configurez un fichier `.env` avec vos accès Supabase :
+### Configuration des Services
+Créez un fichier `.env` à la racine du projet avec les paramètres suivants :
 ```env
 VITE_SUPABASE_URL=votre_url_supabase
 VITE_SUPABASE_ANON_KEY=votre_cle_anonyme
 ```
 
-### 3. Base de Données
-Le schéma SQL complet est disponible dans [database_fix.sql](./database_fix.sql).
+### Structure de la Base de Données
+Le schéma SQL nécessaire au fonctionnement de l'application est disponible dans le fichier `database_fix.sql`.
 
 ---
 
-## 📜 Licence
+## Licence
 
-Ce projet est distribué sous licence **MIT**. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
+Ce projet est sous licence MIT. Pour plus d'informations, veuillez consulter le fichier LICENSE.
 
 ---
 
 <div align="center">
 
-**Réalisé avec excellence par l'équipe [Syntra](https://xsyntra.netlify.app/)**  
-*Agence de développement & design digital premium*
+**Développé par [Syntra](https://xsyntra.netlify.app/)**  
+*Solutions digitales et design de haute précision*
 
 </div>

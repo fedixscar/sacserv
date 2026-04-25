@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { PenLine, Eye, Handshake, Star, Coffee } from 'lucide-react';
+import { PenLine, Eye, Handshake, Star } from 'lucide-react';
 import { pageVariants, OptionButton, ToggleButton, ContinueButton, QuestionHeader } from './ui';
 import confetti from 'canvas-confetti';
 import { QRCodeSVG } from 'qrcode.react';
