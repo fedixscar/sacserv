@@ -569,8 +569,31 @@ export const MerciScreen: React.FC<{ userId: string }> = ({ userId }) => {
         transition={{ type: 'spring', damping: 12, stiffness: 200, delay: 0.2 }}
         className="mb-8 relative"
       >
-        <div className="relative">
-          <LoyaltyCoinIcon />
+        <div className="relative w-[140px] h-[140px] mx-auto">
+          <div className="relative z-10">
+            <LoyaltyCoinIcon />
+          </div>
+          
+          {/* Shimmer Effect over the coin */}
+          <div className="absolute inset-0 z-20 rounded-full overflow-hidden mix-blend-overlay pointer-events-none">
+            <div className="w-[200%] h-full animate-[shimmer_2.5s_infinite]" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.7), rgba(255,255,255,0.9), transparent)' }} />
+          </div>
+
+          {/* Floating Stars around the coin */}
+          <motion.div
+            animate={{ y: [0, -10, 0], rotate: [0, 15, 0], scale: [1, 1.2, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -top-2 -right-4 z-30"
+          >
+            <Star className="w-6 h-6 fill-amber-300 text-amber-200 drop-shadow-md" />
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, 10, 0], rotate: [0, -15, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute bottom-0 -left-2 z-30"
+          >
+            <Star className="w-5 h-5 fill-yellow-400 text-yellow-300 drop-shadow-sm" />
+          </motion.div>
         </div>
       </motion.div>
 
@@ -613,7 +636,7 @@ export const MerciScreen: React.FC<{ userId: string }> = ({ userId }) => {
       >
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm font-bold uppercase tracking-widest" style={{ color: '#271310' }}>Parrainage</p>
-          <p className="text-xs" style={{ color: '#5c5a3a' }}>Gagnez 5 points par ami invité !</p>
+          <p className="text-xs" style={{ color: '#5c5a3a' }}>Gagnez 10 points par ami invité !</p>
         </div>
 
         <div className="bg-white/50 p-2 rounded-xl border border-dashed border-gold/30 w-full flex items-center justify-center">
